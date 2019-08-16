@@ -43,7 +43,11 @@ Crie uma função que dado um intervalo (entre x e y) exiba todos número pares:
 */
 
 function pares(x, y) {
- // código aqui
+ for(var i = x; i <= y; i++){
+   if(i % 2 === 0){
+     console.log(i);
+   }
+ }
 }
 pares(32, 321);
 
@@ -54,7 +58,7 @@ e retorna um booleano true/false caso exista ou não.
 */
 
 function temHabilidade(skills) {
- // código aqui
+ return skills.indexOf('Javascript') !== -1;
 }
 var skills = ["Javascript", "ReactJS", "React Native"];
 temHabilidade(skills); // true ou false
