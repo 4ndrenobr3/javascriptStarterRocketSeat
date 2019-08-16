@@ -72,9 +72,17 @@ Escreva uma função que dado um total de anos de estudo retorna o quão experie
 */
 
 function experiencia(anos) {
- // código aqui
+ if( anos <= 1 ){
+   console.log('Iniciante');
+ }else if( anos <= 3 ){
+   console.log('Intermediario');
+ }else if( anos <= 6 ){
+   console.log('Avançado');
+ }else{
+  console.log('Jedi Master');
+ }
 }
-var anosEstudo = 7;
+var anosEstudo = 0;
 experiencia(anosEstudo);
 // De 0-1 ano: Iniciante
 // De 1-3 anos: Intermediário
@@ -101,7 +109,20 @@ var usuarios = [
 Escreva uma função que produza o seguinte resultado:
 O Diego possui as habilidades: Javascript, ReactJS, Redux
 O Gabriel possui as habilidades: VueJS, Ruby on Rails, Elixir
+*/
 
+function exibeHabilidades(usuarios) {
+  for (usuario of usuarios) {
+    console.log(
+      "O " +
+        usuario.nome +
+        " possui as habilidades: " +
+        usuario.habilidades.join(", ")
+    );
+  }
+}
+exibeHabilidades(usuarios);
+/*
 Dica: Para percorrer um vetor você deve utilizar a sintaxe for...of e para unir valores de um array
 com um separador utilize o join.
 */
