@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Exercicio1</title>
+</head>
+<body>
+    <button type="button">Criar</button>
+
+    <div></div>
+
+    <script>
+        var btn = document.querySelector('button');
+        var quadrado = document.querySelector('div');
+
+        btn.onclick = function(){
+            var criarQuadrado = document.createElement('div');
+
+            criarQuadrado.style.width= '100px';
+            criarQuadrado.style.height= '100px';
+            criarQuadrado.style.marginTop= '10px';
+            criarQuadrado.style.backgroundColor= '#f00';
+
+            quadrado.appendChild(criarQuadrado);
+        }
+    </script>
+</body>
+</html>
